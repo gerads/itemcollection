@@ -108,6 +108,7 @@ export class ItemSheet5eWithBags extends ItemSheet5e {
     for (let i of data.flags.itemcollection.contentsData){
       i.isBackpack = i.type === "backpack"
       i.isSpell = i.type === "spell";
+      i.totalWeight = i.data.weight * i.data.quantity;
     }
     data.canImportExport = item.parent !== undefined;
     data.isOwned = item.parent !== undefined;
@@ -121,8 +122,12 @@ export class ItemSheet5eWithBags extends ItemSheet5e {
       data.parentName += `<- ${parent.name} `
       parent = parent.parent;
     }
-    if (data.parentName.length > 0) data.parentName = `(${data.parentName})`
-    
+    if (data.parentName.length > 0) data.parentName = `(${data.parentName})`;
+
+    data.weightUnit = game.settings.get("dnd5e", "metricWeightUnits")
+          ? game.i18n.localize("DND5E.AbbreviationKgs")
+          : game.i18n.localize("DND5E.AbbreviationLbs");
+
     return data;
   }
 

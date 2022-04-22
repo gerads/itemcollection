@@ -42,18 +42,18 @@
     <div class="tab details itemcollection-details" data-group="primary" data-tab="details">
       <h3 class="form-header">{{localize 'DND5E.ItemContainerDetails'}} {{parentName}}</h3>
 
-      <div class="form-group compressed">
+      <div class="form-group compressed" style="flex-direction: column; padding-bottom: 1.5rem;">
         <label class="checkbox">
           <input type="checkbox" name="data.capacity.weightless" {{checked data.capacity.weightless}}>
           {{localize 'DND5E.ItemContainerWeightless'}}
         </label>
 
-        <div><label>{{localize 'itemcollection.itemsWeight'}} </label> {{itemsWeight}} <label> {{localize 'itemcollection.Pound'}}</label> </div>
+        <div><label>{{localize 'itemcollection.itemsWeight'}} </label> {{itemsWeight}} <label> {{weightUnit}}</label> </div>
         <div><label>{{localize 'itemcollection.totalGoldValue'}} </label> {{totalGoldValue}} </div>
       </div>
 
       {{#if data.currency}}
-      <ol class="currency flexrow">
+      <ol class="currency flexrow" style="justify-content: center;">
         {{#each data.currency as |v k|}}
         <label>{{ lookup ../currencies k }}</label>
         <input type="text" name="data.currency.{{k}}" value="{{v}}" data-dtype="Number" />
@@ -61,10 +61,11 @@
       </ol>
       {{/if}}
 
-      <li class="items-header flexrow" style="text-align: right;">
-        <div class="item-name flexrow">{{localize 'itemcollection.Name'}}</div>
+      <li class="items-header" style="text-align: center; grid-template-columns: 4fr 1fr 1fr 1fr 1fr; display: grid; align-items: center;">
+        <div class="item-name" style="text-align: start;">{{localize 'itemcollection.Name'}}</div>
         <div class="item-detial">{{localize 'itemcollection.Quantity'}}</div>
         <div class="item-detail item-weight">{{localize "DND5E.Weight"}}</div>
+        <div class="item-detail item-weight">{{localize "DND5E.Weight"}} (Stack)</div>
         <div class=item-control>
           {{#if isOwned}}
           <a class="item-control item-export-all" title="{{localize 'itemcollection.itemExportAll'}}"><i class="fas fa-minus"> {{localize 'itemcollection.All'}}</i></a>
@@ -76,7 +77,7 @@
 
       <ol class="items-list inventory-list">
         {{#each flags.itemcollection.contentsData as |item iid|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
+        <li class="item" data-item-id="{{item._id}}" style="display: grid; text-align: center; grid-template-columns: 4fr 1fr 1fr 1fr 1fr;">
           <div class="item-name flexrow">
             <div class="item-image" style="background-image: url('{{item.img}}')"></div>
             <h4>
@@ -87,7 +88,8 @@
             </h4>
           </div>
           <div>{{item.data.quantity}}</div>
-          <div>{{item.data.weight}}</div>
+          <div>{{item.data.weight}} {{../weightUnit}}</div>
+          <div>{{item.totalWeight}} {{../weightUnit}}</div>
 
           <div class="item-controls flexrow">
             <a class="item-control item-edit" title='{{localize "DND5E.ItemEdit"}}'><i class="fas fa-edit"></i></a>
