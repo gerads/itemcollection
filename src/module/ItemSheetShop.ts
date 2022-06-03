@@ -67,6 +67,11 @@ export class ItemSheetShop extends ItemSheet5eWithBags {
     return data;
   }
 
+  /** @override */
+  _getItemAdvancement(item) {
+    return {};
+  }
+
   async _onDragItemStart(event) {
     event.stopPropagation();
     if (game.user.isGM) super._onDragItemStart(event);

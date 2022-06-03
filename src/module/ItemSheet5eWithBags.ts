@@ -131,6 +131,11 @@ export class ItemSheet5eWithBags extends ItemSheet5e {
     return data;
   }
 
+  /** @override */
+  _getItemAdvancement(item) {
+    return {};
+  }
+
 
   async _onDragItemStart(event) {
     event.stopPropagation();
