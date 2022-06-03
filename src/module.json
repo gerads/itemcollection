@@ -87,7 +87,7 @@
         "lang": ["en"]
       }
     ],
-    "url": "https://gitlab.com/tposney/itemcollection/tree/master",
+    "url": "https://github.com/gerads/itemcollection",
     "readme": "https://gitlab.com/tposney/itemcollection/raw/master/README.md",
     "manifest": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/src/module.json",
     "download": "https://github.com/gerads/itemcollection/archive/refs/heads/feature/fix-item-advancement.zip",
