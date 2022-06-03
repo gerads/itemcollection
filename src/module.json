@@ -88,10 +88,10 @@
       }
     ],
     "url": "https://github.com/gerads/itemcollection",
-    "readme": "https://gitlab.com/tposney/itemcollection/raw/master/README.md",
+    "readme": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/README.md",
     "manifest": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/src/module.json",
-    "download": "https://github.com/gerads/itemcollection/archive/refs/heads/feature/fix-item-advancement.zip",
-    "changelog": "https://gitlab.com/tposney/itemcollection/raw/master/Changelog.md",
+    "download": "https://github.com/gerads/itemcollection/raw/feature/fix-item-advancement/package/itemcollection-v1.8.19.zip",
+    "changelog": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/Changelog.md",
     "minimumCoreVersion": "0.8.4",
     "compatibleCoreVersion": "9",
     "minimumSystemVersion": "1.5.0",

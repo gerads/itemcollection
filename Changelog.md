@@ -1,3 +1,6 @@
+## 1.8.19
+* Fix item advancement error in 5e
+
 ## 1.8.18
 * respect game settings to not include currency weight when calculating bag weight.
 * realign the headings to look a little better.
