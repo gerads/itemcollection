@@ -1,104 +1,104 @@
 {
-    "name": "itemcollection",
-    "title": "Item Containers",
-    "description": "Items that can hold other items - think backpack, sack or bag of holding",
-    "version": "1.8.18",
-    "author": "tposney",
-    "type": "module",
-    "socket": true,
-    "includes": [
-      "./assets/**",
-      "./lang/**",
-      "./scripts/**",
-      "./styles/**",
-      "./templates/**",
-      "./module.json",
-      "./README.md",
-      "./icons/**",
-      "./packs/**"
-    ],
-    "media": [
-      {
-        "type": "icon",
-        "location": ""
-      }, 
-      {
-        "type": "cover",
-        "location": ""
+  "name": "itemcollection",
+  "title": "Item Containers - Fixed Advancement",
+  "description": "Items that can hold other items - think backpack, sack or bag of holding",
+  "version": "1.8.19",
+  "author": "tposney",
+  "type": "module",
+  "socket": true,
+  "includes": [
+    "./assets/**",
+    "./lang/**",
+    "./scripts/**",
+    "./styles/**",
+    "./templates/**",
+    "./module.json",
+    "./README.md",
+    "./icons/**",
+    "./packs/**"
+  ],
+  "media": [
+    {
+      "type": "icon",
+      "location": ""
+    }, 
+    {
+      "type": "cover",
+      "location": ""
+    },
+    {
+      "type": "screenshot",
+      "location": ""
+    }
+  ],
+  "languages": [
+  {
+          "lang": "ar",
+          "name": "Arabic",
+          "path": "lang/ar.json"
       },
       {
-        "type": "screenshot",
-        "location": ""
-      }
-    ],
-    "languages": [
-		{
-            "lang": "ar",
-            "name": "Arabic",
-            "path": "lang/ar.json"
-        },
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
-        },
-        {
-            "lang": "ko",
-            "name": "Korean",
-            "path": "lang/ko.json"
-        },
-        {
-            "lang": "fr",
-            "name": "Français",
-            "path": "lang/fr.json"
-        },
-        {
-            "lang": "ja",
-	        "name": " 日本語",
-            "path": "lang/ja.json"
-        },
-        {
-          "lang": "pt-BR",
-          "name": "Português (Brasil)",
-          "path": "lang/pt-BR.json"
-        },
-	    {
-          "lang": "de",
-          "name": "Deutsch",
-          "path": "lang/de.json"
-        }
-    ],
-    "systems": ["dnd5e"],
-    "scripts": [
-    ],
-    "esmodules": [
-        "ItemCollection.js"   
-    ],
-    "styles": [
-        "styles/ItemCollection.css"
-    ],
-    "packs": [    {
-        "name": "packs",
-        "label": "Premade Bags",
-        "system": "dnd5e",
-        "path": "./packs/packs.db",
-        "module": "world",
-        "entity": "Item",
-        "lang": ["en"]
-      }
-    ],
-    "url": "https://gitlab.com/tposney/itemcollection/tree/master",
-    "readme": "https://gitlab.com/tposney/itemcollection/raw/master/README.md",
-    "manifest": "https://gitlab.com/tposney/itemcollection/raw/master/package/module.json",
-    "download": "https://gitlab.com/tposney/itemcollection/raw/master/package/itemcollection-v1.8.18.zip",
-    "changelog": "https://gitlab.com/tposney/itemcollection/raw/master/Changelog.md",
-    "minimumCoreVersion": "0.8.4",
-    "compatibleCoreVersion": "9",
-    "minimumSystemVersion": "1.5.0",
-    "manifestPlusVersion": "1.0.0",
-    "dependencies": [
+          "lang": "en",
+          "name": "English",
+          "path": "lang/en.json"
+      },
       {
-        "name": "lib-wrapper", "type": "module"
+          "lang": "ko",
+          "name": "Korean",
+          "path": "lang/ko.json"
+      },
+      {
+          "lang": "fr",
+          "name": "Français",
+          "path": "lang/fr.json"
+      },
+      {
+          "lang": "ja",
+        "name": " 日本語",
+          "path": "lang/ja.json"
+      },
+      {
+        "lang": "pt-BR",
+        "name": "Português (Brasil)",
+        "path": "lang/pt-BR.json"
+      },
+    {
+        "lang": "de",
+        "name": "Deutsch",
+        "path": "lang/de.json"
       }
-    ]
+  ],
+  "systems": ["dnd5e"],
+  "scripts": [
+  ],
+  "esmodules": [
+      "ItemCollection.js"   
+  ],
+  "styles": [
+      "styles/ItemCollection.css"
+  ],
+  "packs": [    {
+      "name": "packs",
+      "label": "Premade Bags",
+      "system": "dnd5e",
+      "path": "./packs/packs.db",
+      "module": "world",
+      "entity": "Item",
+      "lang": ["en"]
+    }
+  ],
+  "url": "https://github.com/gerads/itemcollection",
+  "readme": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/README.md",
+  "manifest": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/package/module.json",
+  "download": "https://github.com/gerads/itemcollection/raw/feature/fix-item-advancement/package/itemcollection-v1.8.19.zip",
+  "changelog": "https://raw.githubusercontent.com/gerads/itemcollection/feature/fix-item-advancement/Changelog.md",
+  "minimumCoreVersion": "0.8.4",
+  "compatibleCoreVersion": "9",
+  "minimumSystemVersion": "1.5.0",
+  "manifestPlusVersion": "1.0.0",
+  "dependencies": [
+    {
+      "name": "lib-wrapper", "type": "module"
+    }
+  ]
 }
